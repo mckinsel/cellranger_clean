@@ -63,7 +63,7 @@ RUN git clone --recursive https://github.com/martian-lang/martian.git \
 
 # Set up paths to cellranger. This is most of what sourceme.bash would do.
 ENV PATH /cellranger/bin/:/cellranger/lib/bin:/cellranger/tenkit/bin/:/cellranger/tenkit/lib/bin:/martian/bin/:$PATH
-ENV PYTHONPATH /cellranger/lib/python:/cellranger/tenkit/lib/python:$PYTHONPATH
+ENV PYTHONPATH /cellranger/lib/python:/cellranger/tenkit/lib/python:/martian/adapters/python:$PYTHONPATH
 ENV MROPATH /cellranger/mro/:/cellranger/tenkit/mro/
 ENV _TENX_LD_LIBRARY_PATH whatever
 
