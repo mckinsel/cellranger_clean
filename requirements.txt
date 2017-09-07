@@ -48,6 +48,7 @@ pycosat==0.6.1
 pycparser==2.10
 pycrypto==2.6.1
 pycurl==7.19.5.1
+pyfasta
 pyopenssl==0.14
 pyparsing==2.0.3
 pysam
