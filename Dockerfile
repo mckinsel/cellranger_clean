@@ -58,7 +58,7 @@ RUN git clone https://github.com/mckinsel/cellranger.git \
  && make
 
 # Install Martian. Note that we're just building the executables, not the web stuff
-RUN git clone --recursive https://github.com/martian-lang/martian.git \
+RUN git clone --recursive https://github.com/mckinsel/martian.git \
  && cd martian \
  && make mrc mrf mrg mrp mrs mrt_helper mrstat mrjob
 
@@ -93,3 +93,7 @@ RUN git clone https://github.com/mckinsel/tsne.git \
  && make install \
  && cd .. \
  && rm -rf tsne
+
+# Requirements for running martian_shell directly
+COPY _jobinfo /_jobinfo
+RUN apt-get install -y jq

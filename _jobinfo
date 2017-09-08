@@ -1,0 +1,6 @@
+{
+  "profile_mode": "disable",
+  "stackvars_flag": "disable",
+  "monitor_flag": "disable",
+  "invocation": "whatever"
+}
