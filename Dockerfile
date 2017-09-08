@@ -12,6 +12,7 @@ RUN apt-get update \
     libffi-dev \
     libhdf5-dev \
     libncurses-dev \
+    libopenblas-dev \
     libpixman-1-dev \
     libpng-dev \
     libsodium-dev \
@@ -85,3 +86,10 @@ RUN wget https://github.com/alexdobin/STAR/archive/2.5.1b.tar.gz \
  && mv bin/Linux_x86_64_static/STAR* /usr/bin \
  && cd .. \
  && rm -rf STAR-2.5.1b
+
+# Install tsne python pacakge. pip installing it doesn't work
+RUN git clone https://github.com/mckinsel/tsne.git \
+ && cd tsne \
+ && make install \
+ && cd .. \
+ && rm -rf tsne
