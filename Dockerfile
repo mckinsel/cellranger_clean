@@ -75,3 +75,13 @@ RUN apt-get update \
  && alien bcl2fastq2*.rpm \
  && dpkg -i bcl2fastq2*.deb \
  && rm bcl2fastq2*.deb bcl2fastq2*.rpm bcl2fastq2*.zip
+
+# Install STAR aligner
+RUN wget https://github.com/alexdobin/STAR/archive/2.5.1b.tar.gz \
+ && tar xf 2.5.1b.tar.gz \
+ && rm 2.5.1b.tar.gz \
+ && cd STAR-2.5.1b \
+ && make \
+ && mv bin/Linux_x86_64_static/STAR* /usr/bin \
+ && cd .. \
+ && rm -rf STAR-2.5.1b
