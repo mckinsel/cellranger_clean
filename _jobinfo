@@ -3,5 +3,8 @@
   "stackvars_flag": "disable",
   "monitor_flag": "disable",
   "invocation": "whatever",
-  "version": "WDL"
+  "version": {
+    "martian": "'HCA-v2.3.0-rc2'",
+    "pipelines": "HCA-7fe84e2"
+  }
 }
